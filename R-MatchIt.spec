@@ -4,7 +4,7 @@
 #
 Name     : R-MatchIt
 Version  : 4.3.2
-Release  : 35
+Release  : 36
 URL      : https://cran.r-project.org/src/contrib/MatchIt_4.3.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/MatchIt_4.3.2.tar.gz
 Summary  : Nonparametric Preprocessing for Parametric Causal Inference
