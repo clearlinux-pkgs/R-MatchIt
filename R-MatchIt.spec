@@ -4,7 +4,7 @@
 #
 Name     : R-MatchIt
 Version  : 4.3.2
-Release  : 36
+Release  : 37
 URL      : https://cran.r-project.org/src/contrib/MatchIt_4.3.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/MatchIt_4.3.2.tar.gz
 Summary  : Nonparametric Preprocessing for Parametric Causal Inference
@@ -42,10 +42,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1637770378
+export SOURCE_DATE_EPOCH=1641054062
 
 %install
-export SOURCE_DATE_EPOCH=1637770378
+export SOURCE_DATE_EPOCH=1641054062
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -143,3 +143,5 @@ R CMD check --no-manual --no-examples --no-codoc MatchIt || :
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/R/library/MatchIt/libs/MatchIt.so
+/usr/lib64/R/library/MatchIt/libs/MatchIt.so.avx2
+/usr/lib64/R/library/MatchIt/libs/MatchIt.so.avx512
