@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-MatchIt
-Version  : 4.5.2
-Release  : 49
-URL      : https://cran.r-project.org/src/contrib/MatchIt_4.5.2.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/MatchIt_4.5.2.tar.gz
+Version  : 4.5.3
+Release  : 50
+URL      : https://cran.r-project.org/src/contrib/MatchIt_4.5.3.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/MatchIt_4.5.3.tar.gz
 Summary  : Nonparametric Preprocessing for Parametric Causal Inference
 Group    : Development/Tools
 License  : GPL-2.0+
@@ -15,9 +15,13 @@ Requires: R-MatchIt-lib = %{version}-%{release}
 Requires: R-Rcpp
 Requires: R-RcppProgress
 Requires: R-backports
+Requires: R-chk
+Requires: R-rlang
 BuildRequires : R-Rcpp
 BuildRequires : R-RcppProgress
 BuildRequires : R-backports
+BuildRequires : R-chk
+BuildRequires : R-rlang
 BuildRequires : buildreq-R
 # Suppress stripping binaries
 %define __strip /bin/true
@@ -39,17 +43,16 @@ lib components for the R-MatchIt package.
 
 %prep
 %setup -q -n MatchIt
-cd %{_builddir}/MatchIt
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679504781
+export SOURCE_DATE_EPOCH=1681493829
 
 %install
-export SOURCE_DATE_EPOCH=1679504781
+export SOURCE_DATE_EPOCH=1681493829
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
