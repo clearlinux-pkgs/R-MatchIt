@@ -1,5 +1,5 @@
 PKG_NAME := R-MatchIt
-URL = https://cran.r-project.org/src/contrib/MatchIt_4.5.5.tar.gz
+URL = https://ftp.osuosl.org/pub/cran/src/contrib/MatchIt_4.6.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
